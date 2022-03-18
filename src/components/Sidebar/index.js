@@ -1,9 +1,11 @@
 import { Box, CssBaseline, Drawer } from "@mui/material";
 import DrawerList from "./Drawer";
+import { useStyles } from "./style";
 
 const drawerWidth = 260;
 
 const ResponsiveDrawer = (props) => {
+   const classes = useStyles();
    const { window, mobileOpen, handleDrawerToggle, childComponent } = props;
    const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -24,9 +26,13 @@ const ResponsiveDrawer = (props) => {
                ModalProps={{
                   keepMounted: true,
                }}
+               style={{ borderRight: "none" }}
                sx={{
                   display: { xs: "block", sm: "none" },
-                  "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+                  "& .MuiDrawer-paper": {
+                     boxSizing: "border-box",
+                     width: drawerWidth,
+                  },
                }}
             >
                <DrawerList />
