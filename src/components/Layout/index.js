@@ -4,7 +4,7 @@ import ResponsiveDrawer from "../Sidebar";
 
 const Layout = (props) => {
    const [mobileOpen, setMobileOpen] = React.useState(false);
-   const { childComponent, children } = props;
+   const { children } = props;
 
    const handleDrawerToggle = () => {
       setMobileOpen(!mobileOpen);

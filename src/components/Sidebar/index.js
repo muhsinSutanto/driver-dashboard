@@ -30,8 +30,9 @@ const ResponsiveDrawer = (props) => {
                sx={{
                   display: { xs: "block", sm: "none" },
                   "& .MuiDrawer-paper": {
-                     boxSizing: "border-box",
+                     // boxSizing: "border-box",
                      width: drawerWidth,
+                     borderRight: "none !important",
                   },
                }}
             >

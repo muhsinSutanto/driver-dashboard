@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { COLORS } from "../../const/styles";
 
 const useStyles = makeStyles((theme) => ({
    logo: {
@@ -13,20 +14,21 @@ const useStyles = makeStyles((theme) => ({
          minWidth: "36px",
       },
       "& span": {
-         color: "#000",
+         color: COLORS.BLACK,
       },
    },
 
    itemContainerActive: {
-      borderLeft: "3px solid #eb3434",
+      borderLeft: `3px solid ${COLORS.RED_PRIMARY}`,
       "& svg": {
-         color: "#eb3434",
+         color: COLORS.RED_PRIMARY,
       },
       "& div:nth-child(1)": {
          minWidth: "36px",
       },
       "& span": {
-         color: "#eb3434",
+         color: COLORS.RED_PRIMARY,
+         fontWeight: "bold",
       },
    },
 }));
