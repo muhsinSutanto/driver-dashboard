@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../Header";
-import ResponsiveDrawer from "../Sidebar";
+import Header from "../Organism/Header";
+import ResponsiveDrawer from "../Organism/Sidebar";
 
 const Layout = (props) => {
    const [mobileOpen, setMobileOpen] = React.useState(false);

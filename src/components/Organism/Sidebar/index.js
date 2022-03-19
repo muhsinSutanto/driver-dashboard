@@ -52,7 +52,7 @@ const ResponsiveDrawer = (props) => {
          <Box
             component="main"
             sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-            style={{ background: "#E5E4E2", height: "100vh" }}
+            style={{ background: "#fff9f6", height: "100vh" }}
          >
             {childComponent}
          </Box>

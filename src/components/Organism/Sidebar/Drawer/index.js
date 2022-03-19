@@ -1,8 +1,8 @@
 import React from "react";
 import { List, ListItem, ListItemIcon, ListItemText, Toolbar } from "@mui/material";
 import { useStyles } from "../style";
-import { drawerList } from "../../../assets/static";
-import shipper_logo from "../../../assets/images/shipper_logo.png";
+import { drawerList } from "../../../../assets/static";
+import shipper_logo from "../../../../assets/images/shipper_logo.png";
 
 const DrawerList = () => {
    const classes = useStyles();

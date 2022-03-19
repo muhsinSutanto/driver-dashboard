@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, IconButton, Box, MenuItem, Typography } from "@mui/material";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
-import shipper_logo from "../../assets/images/shipper_logo.png";
+import shipper_logo from "../../../assets/images/shipper_logo.png";
 import { useStyles } from "./style";
 
 const Header = (props) => {
