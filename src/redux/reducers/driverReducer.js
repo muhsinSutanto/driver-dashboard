@@ -25,6 +25,24 @@ export default function (state = initialState, action) {
             page: action.payload.trimData.page,
             loading: false,
          };
+      case ACTION.PAGINATE_NEXT:
+         return {
+            ...state,
+            rawData: action.payload.rawData,
+            data: action.payload.trimData.data,
+            totalPage: action.payload.trimData.totalPage,
+            page: action.payload.trimData.page,
+            loading: false,
+         };
+      case ACTION.PAGINATE_PREV:
+         return {
+            ...state,
+            rawData: action.payload.rawData,
+            data: action.payload.trimData.data,
+            totalPage: action.payload.trimData.totalPage,
+            page: action.payload.trimData.page,
+            loading: false,
+         };
 
       default:
          return state;

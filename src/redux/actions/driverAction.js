@@ -24,3 +24,23 @@ export const getData = (page) => (dispatch) => {
       })
       .catch((err) => console.log(err));
 };
+
+export const paginate = (page, cond, rawData) => (dispatch) => {
+   if (cond === "prev") {
+      dispatch({
+         type: ACTION.PAGINATE_PREV,
+         payload: {
+            rawData: rawData,
+            trimData: pagination(rawData, page, 5),
+         },
+      });
+   } else {
+      dispatch({
+         type: ACTION.PAGINATE_NEXT,
+         payload: {
+            rawData: rawData,
+            trimData: pagination(rawData, page, 5),
+         },
+      });
+   }
+};

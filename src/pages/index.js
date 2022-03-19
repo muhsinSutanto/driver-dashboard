@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Layout from "../components/Layout";
 import { useStyles } from "./style";
-import BodyHeader from "../components/Molecules/BodyHeader.js";
-import { getData } from "../redux/actions/driverAction";
+import BodyHeader from "../components/Molecules/BodyHeader/index.js";
+import { getData, paginate } from "../redux/actions/driverAction";
 import DriverCard from "../components/Molecules/DriverCard";
+import Pagination from "../components/Molecules/Pagination";
 
 const Dashboard = () => {
    const classes = useStyles();
@@ -16,7 +17,6 @@ const Dashboard = () => {
       dispatch(getData(1));
    }, []);
 
-   console.log(drivers);
    return (
       <Layout>
          <BodyHeader />
@@ -25,6 +25,7 @@ const Dashboard = () => {
                <DriverCard driver={driver} />
             ))}
          </div>
+         <Pagination />
       </Layout>
    );
 };
