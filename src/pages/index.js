@@ -20,12 +20,20 @@ const Dashboard = () => {
    return (
       <Layout>
          <BodyHeader />
-         <div className={classes.cardsContainer}>
-            {drivers.data.map((driver, index) => (
-               <DriverCard driver={driver} />
-            ))}
-         </div>
-         <Pagination />
+         {!drivers.data.length ? (
+            <div className={classes.emphtyData}>
+               <h1>Data tidak ditemukan</h1>
+            </div>
+         ) : (
+            <React.Fragment>
+               <div className={classes.cardsContainer}>
+                  {drivers.data.map((driver, index) => (
+                     <DriverCard driver={driver} />
+                  ))}
+               </div>
+               <Pagination />
+            </React.Fragment>
+         )}
       </Layout>
    );
 };
