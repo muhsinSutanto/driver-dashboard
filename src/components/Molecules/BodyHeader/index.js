@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
 import { TextField } from "@material-ui/core";
 import { useStyles } from "./style";
+import { searchDriver } from "../../../redux/actions/driverAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const BodyHeader = () => {
    const classes = useStyles();
+   const dispatch = useDispatch();
+
+   const { drivers } = useSelector((state) => state);
+
    return (
       <div className={classes.container}>
          <div>
@@ -16,6 +22,9 @@ const BodyHeader = () => {
          </div>
          <div>
             <TextField
+               onKeyUp={(e) =>
+                  dispatch(searchDriver(e.target.value, drivers.page, drivers.rawData))
+               }
                variant="outlined"
                placeholder="Cari Driver"
                className={classes.inputField}

@@ -44,3 +44,30 @@ export const paginate = (page, cond, rawData) => (dispatch) => {
       });
    }
 };
+
+export const searchDriver = (input, page, rawData) => (dispatch) => {
+   if (!!input.length) {
+      const data = rawData.filter((item) => {
+         return item.name.first.toUpperCase() === input.toUpperCase();
+      });
+
+      console.log(data);
+
+      console.log(data);
+      dispatch({
+         type: ACTION.SEARCH_DRIVER,
+         payload: {
+            rawData: rawData,
+            trimData: pagination(data, 1, 5),
+         },
+      });
+   } else {
+      dispatch({
+         type: ACTION.RESET_DATA,
+         payload: {
+            rawData: rawData,
+            trimData: pagination(rawData, page, 5),
+         },
+      });
+   }
+};

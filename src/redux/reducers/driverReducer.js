@@ -43,6 +43,24 @@ export default function (state = initialState, action) {
             page: action.payload.trimData.page,
             loading: false,
          };
+      case ACTION.SEARCH_DRIVER:
+         return {
+            ...state,
+            rawData: action.payload.rawData,
+            data: action.payload.trimData.data,
+            totalPage: action.payload.trimData.totalPage,
+            page: action.payload.trimData.page,
+            loading: false,
+         };
+      case ACTION.RESET_DATA:
+         return {
+            ...state,
+            rawData: action.payload.rawData,
+            data: action.payload.trimData.data,
+            totalPage: action.payload.trimData.totalPage,
+            page: action.payload.trimData.page,
+            loading: false,
+         };
 
       default:
          return state;
