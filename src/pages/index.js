@@ -31,7 +31,7 @@ const Dashboard = () => {
                      <DriverCard driver={driver} />
                   ))}
                </div>
-               {/* <Pagination /> */}
+               <Pagination />
             </React.Fragment>
          )}
       </Layout>

@@ -1,11 +1,14 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { COLORS } from "../../../const/styles";
 
 const useStyles = makeStyles((theme) => ({
-   cardsContainer: {
-      display: "flex",
-      overflowX: "scroll",
-      width: "100%",
-      marginTop: "24px",
+   container: {
+      textAlign: "center",
+      paddingTop: "40px",
+      "& button": {
+         color: COLORS.BLACK,
+         textTransform: "capitalize",
+      },
    },
 }));
 

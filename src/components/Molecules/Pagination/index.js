@@ -13,7 +13,7 @@ const Pagination = () => {
    const { drivers } = useSelector((state) => state);
 
    return (
-      <div>
+      <div className={classes.container}>
          <Button
             disabled={drivers.page === 1}
             onClick={() => {

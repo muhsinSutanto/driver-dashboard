@@ -10,7 +10,7 @@ const Layout = (props) => {
       setMobileOpen(!mobileOpen);
    };
    return (
-      <div style={{ overflow: "hidden", height: "100vh" }}>
+      <div style={{ height: "100vh" }}>
          <Header handleDrawerToggle={handleDrawerToggle} />
          <ResponsiveDrawer
             childComponent={children}
