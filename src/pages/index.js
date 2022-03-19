@@ -28,7 +28,7 @@ const Dashboard = () => {
             <React.Fragment>
                <div className={classes.cardsContainer}>
                   {drivers.data.map((driver, index) => (
-                     <DriverCard driver={driver} />
+                     <DriverCard key={index} driver={driver} />
                   ))}
                </div>
                <Pagination />

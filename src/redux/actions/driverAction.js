@@ -13,7 +13,6 @@ export const getData = (page) => (dispatch) => {
       .get(`${BASE_URL}/${ENDPOINTS.DRIVER_LIST}results=30`)
       .then((res) => {
          const data = res.data;
-         console.log(data);
          dispatch({
             type: ACTION.GET_DRIVER_DATA,
             payload: {
@@ -51,9 +50,6 @@ export const searchDriver = (input, page, rawData) => (dispatch) => {
          return item.name.first.toUpperCase() === input.toUpperCase();
       });
 
-      console.log(data);
-
-      console.log(data);
       dispatch({
          type: ACTION.SEARCH_DRIVER,
          payload: {
