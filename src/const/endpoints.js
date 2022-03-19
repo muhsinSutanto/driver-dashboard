@@ -1,5 +1,5 @@
 const ENDPOINTS = {
-   DRIVER_LIST: "/api/?results=",
+   DRIVER_LIST: "api/?",
 };
 
 export { ENDPOINTS };
