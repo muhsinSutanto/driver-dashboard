@@ -21,24 +21,44 @@ const useStyles = makeStyles((theme) => ({
          padding: "12px 16px 0px 16px",
          alignItem: "center",
       },
+   },
 
-      "& div:nth-child(2)": {
-         padding: "20px 16px 0px 16px",
+   bottomCard: {
+      padding: "20px 16px 12px 16px",
+      "& img": {
+         borderRadius: "50%",
+         width: "100px",
+      },
+      "& h1": {
+         margin: "0px",
+         fontSize: "12px",
+         color: COLORS.GREY,
+      },
+      "& p": {
+         margin: "0px",
+         fontSize: "14px",
+         color: COLORS.BLACK,
+         paddingBottom: "12px",
+      },
+   },
+
+   "@media (max-width: 450px)": {
+      cardContainer: {
+         marginRight: "0px",
+         marginBottom: "20px",
+      },
+
+      bottomCard: {
+         display: "flex",
+         justifyContent: "space-around",
          "& img": {
-            borderRadius: "50%",
-            width: "80px",
+            width: "100px",
+            height: "100px",
          },
-         "& h1": {
-            margin: "0px",
-            fontSize: "12px",
-            color: COLORS.GREY,
-         },
-         "& p": {
-            margin: "0px",
-            fontSize: "14px",
-            color: COLORS.BLACK,
-            paddingBottom: "12px",
-         },
+      },
+
+      remove: {
+         display: "none",
       },
    },
 }));

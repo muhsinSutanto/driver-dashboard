@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
          fontSize: "16px",
       },
    },
+
+   "@media (max-width: 450px)": {
+      cardsContainer: {
+         flexDirection: "column",
+      },
+   },
 }));
 
 export { useStyles };
