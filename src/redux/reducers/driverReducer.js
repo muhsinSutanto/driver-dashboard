@@ -1,8 +1,10 @@
+import { pagination } from "../../helpers/utils";
 import { ACTION } from "../store/types";
 
 const initialState = {
    loading: false,
-   pagination: 1,
+   page: 1,
+   rawData: [],
    data: [],
 };
 
@@ -11,14 +13,17 @@ export default function (state = initialState, action) {
       case ACTION.LOADING_GET_DRIVER_DATA:
          return {
             ...state,
-            loading: true,
+            loading: action.payload,
          };
 
       case ACTION.GET_DRIVER_DATA:
          return {
             ...state,
-            data: action.payload,
-            pagination: 1,
+            rawData: action.payload.rawData,
+            data: action.payload.trimData.data,
+            totalPage: action.payload.trimData.totalPage,
+            page: action.payload.trimData.page,
+            loading: false,
          };
 
       default:
