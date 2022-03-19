@@ -32,6 +32,32 @@ const useStyles = makeStyles((theme) => ({
          background: COLORS.RED_PRIMARY,
       },
    },
+
+   "@media (max-width: 450px)": {
+      container: {
+         flexFlow: "column",
+         alignItems: "flex-start",
+         "& h1": {
+            fontSize: "20px",
+         },
+         "& div:nth-child(2)": {
+            marginTop: "24px",
+         },
+         "& p": {
+            fontSize: "13px",
+         },
+         "& button": {
+            marginLeft: "0px",
+            width: "100%",
+            padding: "15px 0px",
+         },
+      },
+
+      inputField: {
+         width: "100%",
+         marginBottom: "18px",
+      },
+   },
 }));
 
 export { useStyles };
